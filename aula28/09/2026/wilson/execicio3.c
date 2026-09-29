@@ -1,4 +1,3 @@
-// exercicios 3, 6 e 9
 
 #include <stdio.h>
 
