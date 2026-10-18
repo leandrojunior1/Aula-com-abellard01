@@ -1,0 +1,117 @@
+//01
+#include <stdio.h>
+
+int main() {
+    float n1, n2, n3;
+    float p1, p2, p3;
+    float media;
+    
+    printf("Digite a 1ª nota e seu peso: ");
+    scanf("%f %f", &n1, &p1);
+    
+    printf("Digite a 2ª nota e seu peso: ");
+    scanf("%f %f", &n2, &p2);
+    
+    printf("Digite a 3ª nota e seu peso: ");
+    scanf("%f %f", &n3, &p3);
+    
+    
+    if (p1 == 0 || p2 == 0 || p3 == 0) {
+        printf("\nErro: Nenhum peso pode ser igual a zero!\n");
+    } else {
+        
+        media = (n1 * p1 + n2 * p2 + n3 * p3) / (p1 + p2 + p3);
+        
+        printf("\nMédia Ponderada: %.2f\n", media);
+        printf("Situação: ");
+        
+       
+        if (media >= 6.0) {
+            printf("Aprovado\n");
+        } else if (media >= 4.0) {
+            printf("Exame\n");
+        } else {
+            printf("Reprovado\n");
+        }
+    }
+    
+    return 0;
+}
+
+
+//04
+
+#include <stdio.h>
+
+int main() {
+    float a, b, c;
+    
+    printf("Digite os três lados do triângulo: ");
+    scanf("%f %f %f", &a, &b, &c);
+    
+    if (a + b > c && a + c > b && b + c > a) {
+        if (a == b && b == c) {
+            printf("Triângulo Equilátero (todos os lados iguais)\n");
+        } else if (a == b || a == c || b == c) {
+            printf("Triângulo Isósceles (dois lados iguais)\n");
+        } else {
+            printf("Triângulo Escaleno (todos os lados diferentes)\n");
+        }
+    } else {
+        printf("Os valores informados não formam um triângulo válido.\n");
+    }
+    
+    return 0;
+}
+
+//07
+
+#include <stdio.h>
+
+int main() {
+    int num, primo = 1; 
+    
+    printf("Digite um número inteiro positivo: ");
+    scanf("%d", &num);
+    
+    if (num <= 1) {
+        primo = 0;
+    } else {
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                primo = 0; 
+                break;
+            }
+        }
+    }
+    
+    if (primo) {
+        printf("%d é um número primo.\n", num);
+    } else {
+        printf("%d não é um número primo.\n", num);
+    }
+    
+    return 0;
+}
+
+//10
+
+#include <stdio.h>
+
+int main() {
+    int num, tentativas = 0;
+    
+    do {
+        printf("Digite um número entre 1 e 100: ");
+        scanf("%d", &num);
+        tentativas++;
+        
+        if (num < 1 || num > 100) {
+            printf("Erro: Valor fora da faixa (1 a 100). Tente novamente.\n");
+        }
+    } while (num < 1 || num > 100);
+    
+    printf("Número válido aceito! Foram necessárias %d tentativa(s).\n", tentativas);
+    
+    return 0;
+}
