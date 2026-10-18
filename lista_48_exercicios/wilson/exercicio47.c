@@ -1,11 +1,13 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     double populacaoA = 80000.0;
     double populacaoB = 100000.0;
     int anos = 0;
 
-    while (populacaoA <= populacaoB) {
+    while (populacaoA <= populacaoB)
+    {
         populacaoA *= 1.03;
         populacaoB *= 1.015;
         anos++;

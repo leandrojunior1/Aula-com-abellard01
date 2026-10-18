@@ -1,25 +1,33 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     float temperatura;
     float maxima = 0.0f;
     float minima = 0.0f;
 
-    for (int dia = 1; dia <= 7; dia++) {
+    for (int dia = 1; dia <= 7; dia++)
+    {
         printf("Digite a temperatura do dia %d: ", dia);
-        if (scanf("%f", &temperatura) != 1) {
+        if (scanf("%f", &temperatura) != 1)
+        {
             printf("Entrada invalida.\n");
             return 1;
         }
 
-        if (dia == 1) {
+        if (dia == 1)
+        {
             maxima = temperatura;
             minima = temperatura;
-        } else {
-            if (temperatura > maxima) {
+        }
+        else
+        {
+            if (temperatura > maxima)
+            {
                 maxima = temperatura;
             }
-            if (temperatura < minima) {
+            if (temperatura < minima)
+            {
                 minima = temperatura;
             }
         }
