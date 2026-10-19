@@ -1,18 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int numero;
+    int saldoEstoque;
 
-    printf("--- EXERCICIO 22 ---\n");
-    printf("Digite um numero inteiro: ");
-    scanf("%d", &numero);
+    printf("--- EXERCICIO 23 ---\n");
+    printf("Digite o saldo fisico atual do insumo: ");
+    scanf("%d", &saldoEstoque);
 
-    if (numero > 0) {
-        printf("O numero e POSITIVO.\n\n");
-    } else if (numero < 0) {
-        printf("O numero e NEGATIVO.\n\n");
+    if (saldoEstoque < 50) {
+        printf("ALERTA: Necessidade urgente de reposicao de suprimentos! (Estoque abaixo de 50 unidades)\n\n");
     } else {
-        printf("O numero e EXATAMENTE NULO (zero).\n\n");
+        printf("Estabilidade do armazem atestada. Estoque seguro.\n\n");
     }
 
     return 0;
