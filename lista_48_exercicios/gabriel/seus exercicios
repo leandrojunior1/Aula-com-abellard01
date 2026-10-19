@@ -1,1 +1,180 @@
-Coloque aqui sua lista de exercicios
+#include <stdio.h>
+
+int main() {
+    
+    //MÓDULO 1: Estrutura Básica, Tipos Primitivos e Saída Formatada
+     
+    // --- Exercício 1: Ficha Cadastral Discente ---
+    {
+        int matricula = 2026102;
+        float estatura = 1.75;
+        char inicial = 'G';
+        char curso[50] = "Analise e Desenvolvimento de Sistemas";
+
+        printf("=== EXERCICIO 1: FICHA CADASTRAL DISCENTE ===\n");
+        printf("Matricula: %d\n", matricula);
+        printf("Estatura: %.2f metros\n", estatura);
+        printf("Inicial do Nome: %c\n", inicial);
+        printf("Curso: %s\n\n", curso);
+    }
+
+    //Exercício 2: Formatação Tabular de Preços e Alinhamento Monetário
+    {
+        float teclado = 89.90;
+        float mouse = 45.50;
+        float monitor = 850.00;
+
+        printf("=== EXERCICIO 2: LISTAGEM DE PRECOS ===\n");
+        printf("Teclado:  R$ %.2f\n", teclado);
+        printf("Mouse:    R$ %.2f\n", mouse);
+        printf("Monitor:  R$ %.2f\n\n", monitor);
+    }
+
+    //Exercício 3: Mapeamento de Coordenadas Geográficas de Monitoramento
+    {
+        float latitude = -23.2689;
+        float longitude = -47.1623;
+        char quadrante = 'S';
+        int codigoEstacao = 402;
+
+        printf("=== EXERCICIO 3: MONITORAMENTO ATMOSFERICO ===\n");
+        printf("%.4f | %.4f | %c | %d\n\n", latitude, longitude, quadrante, codigoEstacao);
+    }
+
+    //Exercício 4: Painel de Diagnóstico e Desempenho de Servidor
+    {
+        int requisicoes = 15420;
+        float usoMemoria = 68.45;
+        char estado = 'A';
+        char protocolo[] = "HTTPS";
+
+        printf("=== EXERCICIO 4: PAINEL DE DIAGNOSTICO ===\n");
+        printf("Requisicoes: %d | Memoria: %.2f%% | Estado: %c | Protocolo: %s\n\n", 
+               requisicoes, usoMemoria, estado, protocolo);
+    }
+
+    //Exercício 5: Conversão Literal de Delimitadores e Caracteres Especiais
+    {
+        char chaveAbertura = '{';
+        char asterisco = '*';
+        char pontoVirgula = ';';
+
+        printf("=== EXERCICIO 5: SIMBOLOS GRAMATICAIS ===\n");
+        printf("Chave: '%c'\n", chaveAbertura);
+        printf("Asterisco: '%c'\n", asterisco);
+        printf("Ponto e virgula: '%c'\n\n", pontoVirgula);
+    }
+
+    //Exercício 6: Extrato de Transação Bancária Sintética
+    {
+        int agencia = 1420;
+        int conta = 89214;
+        float valor = 1250.75;
+        char canal = 'T';
+
+        printf("=== EXERCICIO 6: COMPROVANTE DE TRANSFERENCIA ===\n\n");
+        printf("Agencia Remetente: %d\n\n", agencia);
+        printf("Conta Destino: %d\n\n", conta);
+        printf("Valor Liquidado: R$ %.2f\n\n", valor);
+        printf("Canal de Atendimento: %c\n\n", canal);
+    }
+
+    //Exercício 7: Identificação Técnica de Componente Eletroeletrônico
+    {
+        char nomeCircuito[] = "Microcontrolador ARM Cortex";
+        float tensao = 3.3;
+        int lote = 20261018;
+        char eficiencia = 'A';
+
+        printf("=== EXERCICIO 7: FICHA TECNICA DE CATALOGO ===\n");
+        printf("Circuito: %s\n", nomeCircuito);
+        printf("Tensao Nominal: %.1f V\n", tensao);
+        printf("Lote de Fabricacao: %d\n", lote);
+        printf("Classe Energetica: %c\n\n", eficiencia);
+    }
+
+    //Exercício 8: Máscara Estruturada de Versão e Data de Compilação
+    {
+        int dia = 18;
+        int mes = 10;
+        int ano = 2026;
+        float versao = 2.4;
+
+        printf("=== EXERCICIO 8: VERSAO E DATA ===\n");
+        printf("Lancamento do Software: %02d/%02d/%d - Versao %.1f\n\n", dia, mes, ano, versao);
+    }
+
+
+   
+      //MÓDULO 2: Entrada de Dados (scanf) e Aritmética Sequencial
+      Nota: Para testar todos em sequência, remova ou comente blocos que 
+      exigem entrada de teclado se preferir testá-los um a um.
+    
+
+    //Exercício 9: Aritmética de Inteiros e Análise do Operador de Resto
+    {
+        int a, b;
+        printf("--- EXERCICIO 9 ---\n");
+        printf("Digite dois numeros inteiros positivos: ");
+        scanf("%d %d", &a, &b);
+
+        printf("Soma: %d\n", a + b);
+        printf("Subtracao: %d\n", a - b);
+        printf("Multiplicacao: %d\n", a * b);
+        printf("Divisao inteira (quociente): %d\n", a / b);
+        printf("Resto da divisao (modulo): %d\n\n", a % b);
+    }
+
+    //Exercício 10: Termometria Linear e Conversão de Escalas de Temperatura
+    {
+        float celsius, fahrenheit, kelvin;
+        printf("--- EXERCICIO 10 ---\n");
+        printf("Digite a temperatura em graus Celsius: ");
+        scanf("%f", &celsius);
+
+        fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
+        kelvin = celsius + 273.15;
+
+        printf("Temperatura em Fahrenheit: %.2f F\n", fahrenheit);
+        printf("Temperatura em Kelvin: %.2f K\n\n", kelvin);
+    }
+
+    //Exercício 11: Dimensionamento Salarial Líquido com Descontos Estatutários
+    {
+        int horasTrabalhadas;
+        float valorHora, salarioBruto, previdencia, impostoRenda, salarioLiquido;
+
+        printf("--- EXERCICIO 11 ---\n");
+        printf("Digite a quantidade de horas trabalhadas: ");
+        scanf("%d", &horasTrabalhadas);
+        printf("Digite o valor recebido por hora: ");
+        scanf("%f", &valorHora);
+
+        salarioBruto = horasTrabalhadas * valorHora;
+        previdencia = salarioBruto * 0.11;
+        impostoRenda = salarioBruto * 0.05;
+        salarioLiquido = salarioBruto - previdencia - impostoRenda;
+
+        printf("Salario Bruto: R$ %.2f\n", salarioBruto);
+        printf("Desconto Previdencia (11%%): R$ %.2f\n", previdencia);
+        printf("Desconto Imposto de Renda (5%%): R$ %.2f\n", impostoRenda);
+        printf("Salario Liquido: R$ %.2f\n\n", salarioLiquido);
+    }
+
+    //Exercício 12: Métrica de Eficiência e Rendimento Veicular
+    {
+        float distancia, combustivel, precoLitro, rendimento, custoPorKm;
+        printf("--- EXERCICIO 12 ---\n");
+        printf("Digite a distancia total percorrida (km): ");
+        scanf("%f", &distancia);
+        printf("Digite o total de combustivel consumido (litros): ");
+        scanf("%f", &combustivel);
+        printf("Digite o preco do litro do combustivel (R$): ");
+        scanf("%f", &precoLitro);
+
+        rendimento = distancia / combustivel;
+        custoPorKm = (combustivel * precoLitro) / distancia;
+
+        printf("Rendimento operacional: %.2f km/l\n", rendimento);
+        printf("Custo medio por quilometro: R$ %.2f/km\n\n", custoPorKm);
+    }
