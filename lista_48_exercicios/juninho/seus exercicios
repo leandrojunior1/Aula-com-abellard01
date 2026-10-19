@@ -1,1 +1,206 @@
-Coloque aqui sua lista de exercicios
+ //Exercício 13: Geometria Euclidiana de Superfícies Planas Quadriláteras
+    {
+        float base, altura, area, perimetro;
+        printf("--- EXERCICIO 13 ---\n");
+        printf("Digite a base do terreno retangular: ");
+        scanf("%f", &base);
+        printf("Digite a altura do terreno retangular: ");
+        scanf("%f", &altura);
+
+        area = base * altura;
+        perimetro = 2.0 * (base + altura);
+
+        printf("Area superficial total: %.2f metros quadrados\n", area);
+        printf("Comprimento do perimetro: %.2f metros\n\n", perimetro);
+    }
+
+    //Exercício 14: Leitura Heterogênea e Controle de Resíduos no Buffer de Entrada
+    {
+        char nome[50];
+        int idade;
+        float peso;
+        char genero;
+
+        printf("--- EXERCICIO 14 ---\n");
+        printf("Digite o primeiro nome: ");
+        scanf("%49s", nome);
+        printf("Digite a idade: ");
+        scanf("%d", &idade);
+        printf("Digite o peso (kg): ");
+        scanf("%f", &peso);
+        printf("Digite o genero (M/F): ");
+        scanf(" %c", &genero); // Espaço antes de %c limpa o buffer
+
+        printf("\n=== DADOS CAPTURADOS ===\n");
+        printf("Nome: %s\nIdade: %d anos\nPeso: %.2f kg\nGenero: %c\n\n", nome, idade, peso, genero);
+    }
+
+    //Exercício 15: Ponderação Acadêmica com Pesos Diferenciados
+    {
+        float n1, n2, n3, mediaPonderada;
+        printf("--- EXERCICIO 15 ---\n");
+        printf("Digite a primeira nota: ");
+        scanf("%f", &n1);
+        printf("Digite a segunda nota: ");
+        scanf("%f", &n2);
+        printf("Digite a terceira nota: ");
+        scanf("%f", &n3);
+
+        mediaPonderada = ((n1 * 2.0) + (n2 * 3.0) + (n3 * 5.0)) / 10.0;
+        printf("Media Ponderada Final: %.2f\n\n", mediaPonderada);
+    }
+
+    //Exercício 16: Decomposição Cronológica de Segundos em Horas e Minutos
+    {
+        int totalSegundos, horas, minutos, segundos;
+        printf("--- EXERCICIO 16 ---\n");
+        printf("Digite o intervalo de tempo em segundos: ");
+        scanf("%d", &totalSegundos);
+
+        horas = totalSegundos / 3600;
+        minutos = (totalSegundos % 3600) / 60;
+        segundos = totalSegundos % 60;
+
+        printf("Tempo formatado: %02d:%02d:%02d\n\n", horas, minutos, segundos);
+    }
+
+
+    
+     //MÓDULO 3: Estruturas Condicionais Simples e Compostas (if e else)
+    
+
+    //Exercício 17: Verificação de Maioridade Legal e Habilitação de Condutores
+    {
+        int idade;
+        printf("--- EXERCICIO 17 ---\n");
+        printf("Digite a idade do individuo: ");
+        scanf("%d", &idade);
+
+        if (idade >= 18) {
+            printf("Apto para abertura do processo de habilitacao veicular.\n\n");
+        } else {
+            printf("Restricao legal: Menor de idade.\n\n");
+        }
+    }
+
+    //Exercício 18: Determinação de Paridade Numérica e Congruência Aritmética
+    {
+        int numero;
+        printf("--- EXERCICIO 18 ---\n");
+        printf("Digite um numero inteiro: ");
+        scanf("%d", &numero);
+
+        if (numero % 2 == 0) {
+            printf("O numero %d e PAR.\n\n", numero);
+        } else {
+            printf("O numero %d e IMPAR.\n\n", numero);
+        }
+    }
+
+    //Exercício 19: Blindagem Algorítmica contra Divisão por Zero
+    {
+        float numerador, denominador, quociente;
+        printf("--- EXERCICIO 19 ---\n");
+        printf("Digite o numerador: ");
+        scanf("%f", &numerador);
+        printf("Digite o denominador: ");
+        scanf("%f", &denominador);
+
+        if (denominador != 0.0) {
+            quociente = numerador / denominador;
+            printf("Quociente da divisao: %.4f\n\n", quociente);
+        } else {
+            printf("Erro matematico: Divisao por zero nao permitida!\n\n");
+        }
+    }
+
+    //Exercício 20: Magnitude Relativa e Comparação de Escalares Reais
+    {
+        float n1, n2;
+        printf("--- EXERCICIO 20 ---\n");
+        printf("Digite o primeiro numero real: ");
+        scanf("%f", &n1);
+        printf("Digite o segundo numero real: ");
+        scanf("%f", &n2);
+
+        if (n1 > n2) {
+            printf("O primeiro numero (%.2f) e maior que o segundo (%.2f).\n\n", n1, n2);
+        } else if (n2 > n1) {
+            printf("O segundo numero (%.2f) e maior que o primeiro (%.2f).\n\n", n2, n1);
+        } else {
+            printf("Os dois numeros sao iguais.\n\n");
+        }
+    }
+
+    //Exercício 21: Política Comercial de Desconto Progressivo por Montante
+    {
+        float valorBruto, valorLiquido;
+        printf("--- EXERCICIO 21 ---\n");
+        printf("Digite o valor total do carrinho de compras: R$ ");
+        scanf("%f", &valorBruto);
+
+        if (valorBruto > 250.00) {
+            valorLiquido = valorBruto - (valorBruto * 0.10);
+            printf("Desconto aplicado de 10%%!\n");
+        } else {
+            valorLiquido = valorBruto;
+            printf("Valor abaixo do limiar promocional.\n");
+        }
+
+        printf("Valor liquido final a ser pago: R$ %.2f\n\n", valorLiquido);
+    }
+
+    //Exercício 22: Identificação de Sinal Algébrico e Polaridade Numérica
+    {
+        int numero;
+        printf("--- EXERCICIO 22 ---\n");
+        printf("Digite um numero inteiro: ");
+        scanf("%d", &numero);
+
+        if (numero > 0) {
+            printf("O numero e POSITIVO.\n\n");
+        } else if (numero < 0) {
+            printf("O numero e NEGATIVO.\n\n");
+        } else {
+            printf("O numero e EXATAMENTE NULO (zero).\n\n");
+        }
+    }
+
+    //Exercício 23: Monitoramento de Estoque de Segurança e Disparo de Alerta
+    {
+        int saldoEstoque;
+        printf("--- EXERCICIO 23 ---\n");
+        printf("Digite o saldo fisico atual do insumo: ");
+        scanf("%d", &saldoEstoque);
+
+        if (saldoEstoque < 50) {
+            printf("ALERTA: Necessidade urgente de reposicao de suprimentos! (Estoque abaixo de 50 unidades)\n\n");
+        } else {
+            printf("Estabilidade do armazem atestada. Estoque seguro.\n\n");
+        }
+    }
+
+    //Exercício 24: Consolidação de Horas Ordinárias e Jornada Extraordinária
+    {
+        float horasSemanais, valorHora, salarioTotal;
+        printf("--- EXERCICIO 24 ---\n");
+        printf("Digite a carga horaria semanal executada: ");
+        scanf("%f", &horasSemanais);
+        printf("Digite a remuneracao por hora padrao: ");
+        scanf("%f", &valorHora);
+
+        if (horasSemanais > 40.0) {
+            float horasExtras = horasSemanais - 40.0;
+            float valorHoraExtra = valorHora * 1.5; 
+            salarioTotal = (40.0 * valorHora) + (horasExtras * valorHoraExtra);
+            printf("Jornada com horas extras computadas.\n");
+        } else {
+            salarioTotal = horasSemanais * valorHora;
+            printf("Jornada regular computada.\n");
+        }
+
+        printf("Salario semanal total apurado: R$ %.2f\n\n", salarioTotal);
+    }
+
+    return 0;
+}
